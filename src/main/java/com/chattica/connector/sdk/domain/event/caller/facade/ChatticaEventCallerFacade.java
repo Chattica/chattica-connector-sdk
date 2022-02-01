@@ -15,7 +15,7 @@ import com.chattica.connector.sdk.domain.event.listener.container.ListenerContai
 
 import java.util.function.BiConsumer;
 
-public class ChatticaEventCallerFacade {
+public class ChatticaEventCallerFacade implements EventCallerFacade{
     private final ChannelAddEventCaller channelAddEventCaller;
     private final ChannelRemoveEventCaller channelRemoveEventCaller;
     private final ChannelUpdateEventCaller channelUpdateEventCaller;
@@ -35,11 +35,13 @@ public class ChatticaEventCallerFacade {
     }
 
     //TODO 나중에 HashMap 이랑 getType 을 통해 추상화 가능하지 않을까?
+    @Override
     public void routeEvent(Event event) {
         doWithCallerByEvent(event, EventCaller::callEvent);
     }
 
     //TODO 뭔가 RxJava 나 Reactor 같은거로 만들 수 있을 것 같은데
+    @Override
     public <T extends Event> void addListener(T event, EventListener<T> listener) {
         doWithCallerByEvent(event, (caller, e) -> {
             //TODO ListenerContainer 의 Generic T 와 해당 메서드의 Generic T 가 서로 일치하지 않을 경우 오류발생 즉, doWithCallerByEvent 의 반환값에 따라 오류가 발생할 수 있다.
