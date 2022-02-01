@@ -1,4 +1,4 @@
-package com.chattica.connector.sdk.domain.event.data.dto.channel;
+package com.chattica.connector.sdk.domain.event.data.dto.event.message;
 
 import com.chattica.connector.sdk.domain.event.data._interface.Operator;
 import com.chattica.connector.sdk.domain.event.data.dto.Event;
@@ -10,12 +10,12 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Getter
-public abstract class ChannelEvent extends Event {
+public abstract class MessageEvent extends Event {
     private final Channel target;
     private final Operator operator;
 
     @Override
     public DataType getTargetType() {
-        return StandardDataType.CHANNEL;
+        return StandardDataType.MESSAGE;
     }
 }

@@ -2,12 +2,12 @@ package com.chattica.connector.sdk.domain.event.caller.facade;
 
 import com.chattica.connector.sdk.domain.event.caller.StandardEventCaller;
 import com.chattica.connector.sdk.domain.event.data.dto.Event;
-import com.chattica.connector.sdk.domain.event.data.dto.channel.ChannelAddEvent;
-import com.chattica.connector.sdk.domain.event.data.dto.channel.ChannelRemoveEvent;
-import com.chattica.connector.sdk.domain.event.data.dto.channel.ChannelUpdateEvent;
-import com.chattica.connector.sdk.domain.event.data.dto.message.MessageAddEvent;
-import com.chattica.connector.sdk.domain.event.data.dto.message.MessageRemoveEvent;
-import com.chattica.connector.sdk.domain.event.data.dto.message.MessageUpdateEvent;
+import com.chattica.connector.sdk.domain.event.data.dto.event.channel.ChannelAddEvent;
+import com.chattica.connector.sdk.domain.event.data.dto.event.channel.ChannelRemoveEvent;
+import com.chattica.connector.sdk.domain.event.data.dto.event.channel.ChannelUpdateEvent;
+import com.chattica.connector.sdk.domain.event.data.dto.event.message.MessageAddEvent;
+import com.chattica.connector.sdk.domain.event.data.dto.event.message.MessageRemoveEvent;
+import com.chattica.connector.sdk.domain.event.data.dto.event.message.MessageUpdateEvent;
 import com.chattica.connector.sdk.domain.event.exception.EventRoutingPathNotFound;
 
 public class ChatticaEventCallerFacade {
