@@ -4,8 +4,7 @@ import com.chattica.connector.sdk.domain.event.data.type.EventDataType;
 import com.chattica.connector.sdk.domain.event.data.type.EventOperation;
 import com.chattica.connector.sdk.global.data._interface.AbstractData;
 import com.chattica.connector.sdk.global.data._interface.DataType;
-import com.chattica.connector.sdk.global.data._interface.Id;
-import com.chattica.connector.sdk.global.data.dto.id.JavaUniqueId;
+import com.chattica.connector.sdk.global.data.dto.id.EventId;
 
 public abstract class Event implements AbstractData {
     @Override
@@ -17,7 +16,5 @@ public abstract class Event implements AbstractData {
     public abstract DataType getTargetType();
 
     @Override
-    public Id<String> getId() {
-        return new JavaUniqueId();
-    }
+    public abstract EventId getId();
 }

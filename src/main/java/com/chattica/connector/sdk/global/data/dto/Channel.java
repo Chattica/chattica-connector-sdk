@@ -1,14 +1,14 @@
 package com.chattica.connector.sdk.global.data.dto;
 
 import com.chattica.connector.sdk.global.data._interface.AbstractData;
-import com.chattica.connector.sdk.global.data._interface.Id;
 import com.chattica.connector.sdk.global.data._interface.Nameable;
+import com.chattica.connector.sdk.global.data.dto.id.ChannelId;
 import com.chattica.connector.sdk.global.data.type.StandardDataType;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 public abstract class Channel implements AbstractData, Nameable {
-    private final Id id;
+    private final ChannelId id;
     private final String name;
 
     @Override
@@ -17,7 +17,7 @@ public abstract class Channel implements AbstractData, Nameable {
     }
 
     @Override
-    public Id getId() {
+    public ChannelId getId() {
         return id;
     }
 

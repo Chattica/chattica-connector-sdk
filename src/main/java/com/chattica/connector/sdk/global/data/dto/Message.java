@@ -1,13 +1,13 @@
 package com.chattica.connector.sdk.global.data.dto;
 
 import com.chattica.connector.sdk.global.data._interface.AbstractData;
-import com.chattica.connector.sdk.global.data._interface.Id;
+import com.chattica.connector.sdk.global.data.dto.id.MessageId;
 import com.chattica.connector.sdk.global.data.type.StandardDataType;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 public abstract class Message implements AbstractData {
-    private final Id id;
+    private final MessageId id;
     private final String content;
     private final User author;
     private final Channel messagedAt;
@@ -18,7 +18,7 @@ public abstract class Message implements AbstractData {
     }
 
     @Override
-    public Id getId() {
+    public MessageId getId() {
         return id;
     }
 
