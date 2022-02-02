@@ -1,6 +1,7 @@
 package com.chattica.connector.sdk.global.data.dto;
 
 import com.chattica.connector.sdk.global.data._interface.AbstractData;
+import com.chattica.connector.sdk.global.data._interface.DataType;
 import com.chattica.connector.sdk.global.data.dto.id.MessageId;
 import com.chattica.connector.sdk.global.data.type.StandardDataType;
 import lombok.RequiredArgsConstructor;
@@ -13,8 +14,8 @@ public abstract class Message implements AbstractData {
     private final Channel messagedAt;
 
     @Override
-    public Integer getType() {
-        return StandardDataType.MESSAGE.getType();
+    public DataType getType() {
+        return StandardDataType.MESSAGE;
     }
 
     @Override

@@ -1,20 +1,20 @@
 package com.chattica.connector.sdk.domain.event.data.dto;
 
-import com.chattica.connector.sdk.domain.event.data.type.EventDataType;
 import com.chattica.connector.sdk.domain.event.data.type.EventOperation;
 import com.chattica.connector.sdk.global.data._interface.AbstractData;
 import com.chattica.connector.sdk.global.data._interface.DataType;
 import com.chattica.connector.sdk.global.data.dto.id.EventId;
+import lombok.RequiredArgsConstructor;
 
+@RequiredArgsConstructor
 public abstract class Event implements AbstractData {
-    @Override
-    public Integer getType() {
-        return EventDataType.EVENT.getType();
-    }
+    private final EventId id;
 
     public abstract EventOperation getOperation();
     public abstract DataType getTargetType();
 
     @Override
-    public abstract EventId getId();
+    public EventId getId() {
+        return id;
+    }
 }

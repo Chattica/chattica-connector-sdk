@@ -1,6 +1,7 @@
 package com.chattica.connector.sdk.global.data.dto;
 
 import com.chattica.connector.sdk.global.data._interface.AbstractData;
+import com.chattica.connector.sdk.global.data._interface.DataType;
 import com.chattica.connector.sdk.global.data._interface.Nameable;
 import com.chattica.connector.sdk.global.data.dto.id.ChannelId;
 import com.chattica.connector.sdk.global.data.type.StandardDataType;
@@ -12,8 +13,8 @@ public abstract class Channel implements AbstractData, Nameable {
     private final String name;
 
     @Override
-    public Integer getType() {
-        return StandardDataType.CHANNEL.getType();
+    public DataType getType() {
+        return StandardDataType.CHANNEL;
     }
 
     @Override
