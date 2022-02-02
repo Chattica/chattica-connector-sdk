@@ -12,9 +12,11 @@ import com.chattica.connector.sdk.domain.event.data.dto.event.message.MessageUpd
 import com.chattica.connector.sdk.domain.event.exception.EventRoutingPathNotFound;
 import com.chattica.connector.sdk.domain.event.listener.EventListener;
 import com.chattica.connector.sdk.domain.event.listener.container.ListenerContainer;
+import lombok.RequiredArgsConstructor;
 
 import java.util.function.BiConsumer;
 
+@RequiredArgsConstructor
 public class ChatticaEventCallerFacade implements EventCallerFacade{
     private final ChannelAddEventCaller channelAddEventCaller;
     private final ChannelRemoveEventCaller channelRemoveEventCaller;
