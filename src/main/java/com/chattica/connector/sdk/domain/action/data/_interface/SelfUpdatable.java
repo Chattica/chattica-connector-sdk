@@ -4,5 +4,5 @@ import com.chattica.connector.sdk.global.data._interface.AbstractData;
 import com.chattica.connector.sdk.global.data._interface.Id;
 
 public interface SelfUpdatable<T extends AbstractData> {
-    Id update(T data);
+    <R extends Id> R update(T data);
 }
