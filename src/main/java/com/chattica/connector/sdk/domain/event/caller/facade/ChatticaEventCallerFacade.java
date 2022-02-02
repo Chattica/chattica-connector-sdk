@@ -1,7 +1,12 @@
 package com.chattica.connector.sdk.domain.event.caller.facade;
 
-import com.chattica.connector.sdk.domain.event.caller.EventCaller;
-import com.chattica.connector.sdk.domain.event.caller.StandardEventCaller;
+import com.chattica.connector.sdk.domain.event.caller.*;
+import com.chattica.connector.sdk.domain.event.caller.channel.ChannelAddEventCaller;
+import com.chattica.connector.sdk.domain.event.caller.channel.ChannelRemoveEventCaller;
+import com.chattica.connector.sdk.domain.event.caller.channel.ChannelUpdateEventCaller;
+import com.chattica.connector.sdk.domain.event.caller.message.MessageAddEventCaller;
+import com.chattica.connector.sdk.domain.event.caller.message.MessageRemoveEventCaller;
+import com.chattica.connector.sdk.domain.event.caller.message.MessageUpdateEventCaller;
 import com.chattica.connector.sdk.domain.event.data.dto.Event;
 import com.chattica.connector.sdk.domain.event.data.dto.event.channel.ChannelAddEvent;
 import com.chattica.connector.sdk.domain.event.data.dto.event.channel.ChannelRemoveEvent;
@@ -20,7 +25,7 @@ import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
 @RequiredArgsConstructor
-public class ChatticaEventCallerFacade implements EventCallerFacade{
+public class ChatticaEventCallerFacade implements EventCallerFacade {
     private final ChannelAddEventCaller channelAddEventCaller;
     private final ChannelRemoveEventCaller channelRemoveEventCaller;
     private final ChannelUpdateEventCaller channelUpdateEventCaller;
@@ -79,12 +84,4 @@ public class ChatticaEventCallerFacade implements EventCallerFacade{
             default -> throw new EventRoutingPathNotFound(event.getClass().getSimpleName());
         }
     }
-
-    private static class ChannelAddEventCaller extends StandardEventCaller<ChannelAddEvent> {}
-    private static class ChannelRemoveEventCaller extends StandardEventCaller<ChannelRemoveEvent> {}
-    private static class ChannelUpdateEventCaller extends StandardEventCaller<ChannelUpdateEvent> {}
-
-    private static class MessageAddEventCaller extends StandardEventCaller<MessageAddEvent> {}
-    private static class MessageRemoveEventCaller extends StandardEventCaller<MessageRemoveEvent> {}
-    private static class MessageUpdateEventCaller extends StandardEventCaller<MessageUpdateEvent> {}
 }
