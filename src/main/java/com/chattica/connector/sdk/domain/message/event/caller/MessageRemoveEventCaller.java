@@ -1,0 +1,6 @@
+package com.chattica.connector.sdk.domain.message.event.caller;
+
+import com.chattica.connector.sdk.standard.StandardEventCaller;
+import com.chattica.connector.sdk.domain.message.event.MessageRemoveEvent;
+
+public class MessageRemoveEventCaller extends StandardEventCaller<MessageRemoveEvent> {}
