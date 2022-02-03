@@ -1,6 +1,6 @@
 package com.chattica.connector.sdk.global.event.caller;
 
-import com.chattica.connector.sdk.domain.event.Event;
+import com.chattica.connector.sdk.global.event.Event;
 import com.chattica.connector.sdk.global.event.listener.EventListener;
 import com.chattica.connector.sdk.global.data.DataType;
 

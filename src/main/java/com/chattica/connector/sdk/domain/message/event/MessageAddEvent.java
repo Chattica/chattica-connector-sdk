@@ -1,10 +1,10 @@
 package com.chattica.connector.sdk.domain.message.event;
 
 import com.chattica.connector.sdk.global.event.EventDataType;
-import com.chattica.connector.sdk.global.event.EventOperation;
-import com.chattica.connector.sdk.domain.event.EventType;
+import com.chattica.connector.sdk.global.event.operate.EventOperation;
+import com.chattica.connector.sdk.global.event.EventType;
 import com.chattica.connector.sdk.domain.channel.Channel;
-import com.chattica.connector.sdk.domain.event.EventId;
+import com.chattica.connector.sdk.global.event.EventId;
 
 public class MessageAddEvent extends MessageEvent{
     public MessageAddEvent(EventId id, Channel target, Channel operator) {

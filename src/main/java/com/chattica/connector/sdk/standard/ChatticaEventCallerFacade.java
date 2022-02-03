@@ -8,7 +8,7 @@ import com.chattica.connector.sdk.global.event.caller.EventCallerFacade;
 import com.chattica.connector.sdk.domain.message.event.caller.MessageAddEventCaller;
 import com.chattica.connector.sdk.domain.message.event.caller.MessageRemoveEventCaller;
 import com.chattica.connector.sdk.domain.message.event.caller.MessageUpdateEventCaller;
-import com.chattica.connector.sdk.domain.event.Event;
+import com.chattica.connector.sdk.global.event.Event;
 import com.chattica.connector.sdk.domain.channel.event.ChannelAddEvent;
 import com.chattica.connector.sdk.domain.channel.event.ChannelRemoveEvent;
 import com.chattica.connector.sdk.domain.channel.event.ChannelUpdateEvent;

@@ -2,7 +2,7 @@ package com.chattica.connector.sdk.standard;
 
 import com.chattica.connector.sdk.global.event.caller.EventCaller;
 import com.chattica.connector.sdk.global.event.listener.container.ListenerContainer;
-import com.chattica.connector.sdk.domain.event.Event;
+import com.chattica.connector.sdk.global.event.Event;
 import com.chattica.connector.sdk.global.event.listener.EventListener;
 import lombok.RequiredArgsConstructor;
 

@@ -1,11 +1,11 @@
 package com.chattica.connector.sdk.domain.message.event;
 
-import com.chattica.connector.sdk.domain.event.Event;
+import com.chattica.connector.sdk.global.event.Event;
 import com.chattica.connector.sdk.global.event.EventDataType;
 import com.chattica.connector.sdk.global.data.DataType;
-import com.chattica.connector.sdk.domain.event.EventType;
+import com.chattica.connector.sdk.global.event.EventType;
 import com.chattica.connector.sdk.domain.channel.Channel;
-import com.chattica.connector.sdk.domain.event.EventId;
+import com.chattica.connector.sdk.global.event.EventId;
 import com.chattica.connector.sdk.standard.StandardDataType;
 import lombok.Getter;
 

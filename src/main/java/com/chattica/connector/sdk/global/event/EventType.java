@@ -1,4 +1,4 @@
-package com.chattica.connector.sdk.domain.event;
+package com.chattica.connector.sdk.global.event;
 
 import com.chattica.connector.sdk.global.data.DataType;
 

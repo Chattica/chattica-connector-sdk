@@ -1,6 +1,5 @@
 package com.chattica.connector.sdk.global.event;
 
-import com.chattica.connector.sdk.domain.event.EventType;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
