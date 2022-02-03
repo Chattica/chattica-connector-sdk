@@ -18,7 +18,7 @@ import com.chattica.connector.sdk.domain.event.data.type.EventDataType;
 import com.chattica.connector.sdk.domain.event.exception.EventRoutingPathNotFound;
 import com.chattica.connector.sdk.domain.event.listener.EventListener;
 import com.chattica.connector.sdk.domain.event.listener.container.ListenerContainer;
-import com.chattica.connector.sdk.global.data._interface.DataType;
+import com.chattica.connector.sdk.global.data._interface.datatype.DataType;
 import lombok.RequiredArgsConstructor;
 
 import java.util.function.BiConsumer;
