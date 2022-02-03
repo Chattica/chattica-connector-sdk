@@ -1,6 +1,6 @@
 package com.chattica.connector.sdk.domain.channel.event;
 
-import com.chattica.connector.sdk.global.event.EventDataType;
+import com.chattica.connector.sdk.standard.StandardEventDataType;
 import com.chattica.connector.sdk.global.event.operate.EventOperation;
 import com.chattica.connector.sdk.global.event.operate.Operator;
 import com.chattica.connector.sdk.global.event.EventType;
@@ -19,6 +19,6 @@ public class ChannelUpdateEvent extends ChannelEvent{
 
     @Override
     public EventType getType() {
-        return EventDataType.EVENT_CHANNEL_UPDATE;
+        return StandardEventDataType.EVENT_CHANNEL_UPDATE;
     }
 }

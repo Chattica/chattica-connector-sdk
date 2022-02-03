@@ -15,7 +15,6 @@ import com.chattica.connector.sdk.domain.channel.event.ChannelUpdateEvent;
 import com.chattica.connector.sdk.domain.message.event.MessageAddEvent;
 import com.chattica.connector.sdk.domain.message.event.MessageRemoveEvent;
 import com.chattica.connector.sdk.domain.message.event.MessageUpdateEvent;
-import com.chattica.connector.sdk.global.event.EventDataType;
 import com.chattica.connector.sdk.global.event.exception.EventRoutingPathNotFound;
 import com.chattica.connector.sdk.global.event.listener.EventListener;
 import com.chattica.connector.sdk.global.event.listener.container.ListenerContainer;
@@ -26,7 +25,7 @@ import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
 @RequiredArgsConstructor
-public class ChatticaEventCallerFacade implements EventCallerFacade {
+public class StandardEventCallerFacade implements EventCallerFacade {
     private final ChannelAddEventCaller channelAddEventCaller;
     private final ChannelRemoveEventCaller channelRemoveEventCaller;
     private final ChannelUpdateEventCaller channelUpdateEventCaller;
@@ -35,7 +34,7 @@ public class ChatticaEventCallerFacade implements EventCallerFacade {
     private final MessageRemoveEventCaller messageRemoveEventCaller;
     private final MessageUpdateEventCaller messageUpdateEventCaller;
 
-    public ChatticaEventCallerFacade() {
+    public StandardEventCallerFacade() {
         channelAddEventCaller = new ChannelAddEventCaller();
         channelRemoveEventCaller = new ChannelRemoveEventCaller();
         channelUpdateEventCaller = new ChannelUpdateEventCaller();
@@ -54,14 +53,14 @@ public class ChatticaEventCallerFacade implements EventCallerFacade {
     //TODO 뭔가 RxJava 나 Reactor 같은거로 만들 수 있을 것 같은데
     @Override
     public <T extends Event> void addListener(DataType type, EventListener<T> listener) {
-        doWithCallerByEvent((EventDataType) type, (caller) -> {
+        doWithCallerByEvent((StandardEventDataType) type, (caller) -> {
             //TODO ListenerContainer 의 Generic T 와 해당 메서드의 Generic T 가 서로 일치하지 않을 경우 오류발생 즉, doWithCallerByEvent 의 반환값에 따라 오류가 발생할 수 있다.
             if (caller instanceof ListenerContainer container) container.addListener(listener);
             else throw new RuntimeException("해당 이벤트에 대한 caller 는 listener 추가를 지원하지 않습니다!");
         });
     }
 
-    private void  doWithCallerByEvent(EventDataType type, Consumer<EventCaller> callback) {
+    private void  doWithCallerByEvent(StandardEventDataType type, Consumer<EventCaller> callback) {
         switch (type) {
             case EVENT_CHANNEL_ADD -> callback.accept(channelAddEventCaller);
             case EVENT_CHANNEL_REMOVE -> callback.accept(channelRemoveEventCaller);

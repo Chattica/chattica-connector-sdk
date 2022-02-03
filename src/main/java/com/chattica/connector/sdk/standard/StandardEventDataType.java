@@ -1,9 +1,10 @@
-package com.chattica.connector.sdk.global.event;
+package com.chattica.connector.sdk.standard;
 
+import com.chattica.connector.sdk.global.event.EventType;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public enum EventDataType implements EventType {
+public enum StandardEventDataType implements EventType {
     EVENT(1000),
     //ALL, ADD, GET, UPDATE, REMOVE
     EVENT_MESSAGE(1001), EVENT_MESSAGE_ADD(1002), EVENT_MESSAGE_UPDATE(1004), EVENT_MESSAGE_REMOVE(1005),

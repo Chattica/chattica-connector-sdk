@@ -1,7 +1,7 @@
 package com.chattica.connector.sdk.domain.message.event;
 
 import com.chattica.connector.sdk.global.event.Event;
-import com.chattica.connector.sdk.global.event.EventDataType;
+import com.chattica.connector.sdk.standard.StandardEventDataType;
 import com.chattica.connector.sdk.global.data.DataType;
 import com.chattica.connector.sdk.global.event.EventType;
 import com.chattica.connector.sdk.domain.channel.Channel;
@@ -27,6 +27,6 @@ public abstract class MessageEvent extends Event {
 
     @Override
     public EventType getType() {
-        return EventDataType.EVENT_MESSAGE;
+        return StandardEventDataType.EVENT_MESSAGE;
     }
 }
