@@ -3,20 +3,15 @@ package com.chattica.connector.sdk.global.event;
 import com.chattica.connector.sdk.global.event.operate.EventOperation;
 import com.chattica.connector.sdk.global.data.AbstractData;
 import com.chattica.connector.sdk.global.data.DataType;
-import lombok.RequiredArgsConstructor;
+import com.chattica.connector.sdk.global.event.operate.Operator;
 
-@RequiredArgsConstructor
-public abstract class Event implements AbstractData {
-    private final EventId id;
-
-    public abstract EventOperation getOperation();
-    public abstract DataType getTargetType();
-
+public interface Event extends AbstractData {
     @Override
-    public EventId getId() {
-        return id;
-    }
-
+    EventId getId();
     @Override
-    public abstract EventType getType();
+    EventType getType();
+    Operator getOperator();
+    EventOperation getOperation();
+    DataType getTargetType();
+    AbstractData getTarget();
 }

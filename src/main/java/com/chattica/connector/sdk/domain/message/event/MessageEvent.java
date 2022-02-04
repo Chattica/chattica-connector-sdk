@@ -1,32 +1,22 @@
 package com.chattica.connector.sdk.domain.message.event;
 
-import com.chattica.connector.sdk.global.event.Event;
-import com.chattica.connector.sdk.standard.StandardEventDataType;
-import com.chattica.connector.sdk.global.data.DataType;
+import com.chattica.connector.sdk.domain.message.Message;
+import com.chattica.connector.sdk.global.event.operate.EventOperation;
+import com.chattica.connector.sdk.global.event.operate.Operator;
 import com.chattica.connector.sdk.global.event.EventType;
-import com.chattica.connector.sdk.domain.channel.Channel;
 import com.chattica.connector.sdk.global.event.EventId;
 import com.chattica.connector.sdk.standard.StandardDataType;
+import com.chattica.connector.sdk.standard.StandardEvent;
+import com.chattica.connector.sdk.standard.StandardEventDataType;
 import lombok.Getter;
 
 @Getter
-public abstract class MessageEvent extends Event {
-    private final Channel target;
-    private final Channel operator;
-
-    public MessageEvent(EventId id, Channel target, Channel operator) {
-        super(id);
-        this.target = target;
-        this.operator = operator;
+public abstract class MessageEvent extends StandardEvent {
+    public MessageEvent(EventId id, Operator operator, EventOperation operation, Message target) {
+        super(id, StandardEventDataType.EVENT_MESSAGE, operator, operation, StandardDataType.MESSAGE, target);
     }
 
-    @Override
-    public DataType getTargetType() {
-        return StandardDataType.MESSAGE;
-    }
-
-    @Override
-    public EventType getType() {
-        return StandardEventDataType.EVENT_MESSAGE;
+    public MessageEvent(EventId id, EventType type, Operator operator, EventOperation operation, Message target) {
+        super(id, type, operator, operation, StandardDataType.MESSAGE, target);
     }
 }
