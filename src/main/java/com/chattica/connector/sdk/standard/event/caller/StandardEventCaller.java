@@ -1,4 +1,4 @@
-package com.chattica.connector.sdk.standard;
+package com.chattica.connector.sdk.standard.event.caller;
 
 import com.chattica.connector.sdk.global.event.caller.EventCaller;
 import com.chattica.connector.sdk.global.event.listener.container.ListenerContainer;

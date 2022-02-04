@@ -1,4 +1,4 @@
-package com.chattica.connector.sdk.standard;
+package com.chattica.connector.sdk.standard.event;
 
 import com.chattica.connector.sdk.global.event.EventType;
 import lombok.RequiredArgsConstructor;

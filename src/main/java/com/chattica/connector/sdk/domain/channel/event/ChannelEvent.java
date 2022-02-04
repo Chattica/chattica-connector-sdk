@@ -1,13 +1,10 @@
 package com.chattica.connector.sdk.domain.channel.event;
 
 import com.chattica.connector.sdk.domain.channel.Channel;
-import com.chattica.connector.sdk.global.data.AbstractData;
-import com.chattica.connector.sdk.global.data.DataType;
-import com.chattica.connector.sdk.global.event.Event;
 import com.chattica.connector.sdk.global.event.operate.EventOperation;
 import com.chattica.connector.sdk.global.event.operate.Operator;
-import com.chattica.connector.sdk.standard.StandardEvent;
-import com.chattica.connector.sdk.standard.StandardEventDataType;
+import com.chattica.connector.sdk.standard.event.StandardEvent;
+import com.chattica.connector.sdk.standard.event.StandardEventDataType;
 import com.chattica.connector.sdk.global.event.EventType;
 import com.chattica.connector.sdk.global.event.EventId;
 import com.chattica.connector.sdk.standard.StandardDataType;
