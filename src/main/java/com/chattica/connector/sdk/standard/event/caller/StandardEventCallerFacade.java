@@ -25,6 +25,8 @@ import lombok.RequiredArgsConstructor;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
+import static com.chattica.connector.sdk.standard.event.StandardEventDataType.*;
+
 /**
  * Chattica 내의 모든 Event에 대한 Listening/Calling 을 간편하게해주는 EventCallerFacade 에 대한 표준구현체입니다.
  *
@@ -56,7 +58,17 @@ public class StandardEventCallerFacade implements EventCallerFacade {
     //TODO 나중에 HashMap 이랑 getType 을 통해 추상화 가능하지 않을까?
     @Override
     public void routeEvent(Event event) {
-        doWithCallerByEvent(event, EventCaller::callEvent);
+        //TODO 17 preview 정식 지원되면 lambda pattern matching expression 쓰자.. (걍 코틀린쓸까)
+        switch ((StandardEventDataType)event.getType()) {
+            case EVENT_CHANNEL_ADD -> channelAddEventCaller.callEvent((ChannelAddEvent) event);
+            case EVENT_CHANNEL_REMOVE -> channelRemoveEventCaller.callEvent((ChannelRemoveEvent) event);
+            case EVENT_CHANNEL_UPDATE -> channelUpdateEventCaller.callEvent((ChannelUpdateEvent) event);
+
+            case EVENT_MESSAGE_ADD -> messageAddEventCaller.callEvent((MessageAddEvent) event);
+            case EVENT_MESSAGE_REMOVE -> messageRemoveEventCaller.callEvent((MessageRemoveEvent) event);
+            case EVENT_MESSAGE_UPDATE -> messageUpdateEventCaller.callEvent((MessageUpdateEvent) event);
+            default -> throw new EventRoutingPathNotFound(event.getClass().getSimpleName());
+        }
     }
 
     //TODO 뭔가 RxJava 나 Reactor 같은거로 만들 수 있을 것 같은데
@@ -78,19 +90,6 @@ public class StandardEventCallerFacade implements EventCallerFacade {
             case EVENT_MESSAGE_REMOVE -> callback.accept(messageRemoveEventCaller);
             case EVENT_MESSAGE_UPDATE -> callback.accept(messageUpdateEventCaller);
             default -> throw new RuntimeException("이벤트타입을 찾을 수 없습니다 - " + type.getType());
-        }
-    }
-
-    private void  doWithCallerByEvent(Event event, BiConsumer<EventCaller, Event> callback) {
-        switch (event) {
-            case ChannelAddEvent e -> callback.accept(channelAddEventCaller, e);
-            case ChannelRemoveEvent e -> callback.accept(channelRemoveEventCaller, e);
-            case ChannelUpdateEvent e -> callback.accept(channelUpdateEventCaller, e);
-
-            case MessageAddEvent e -> callback.accept(messageAddEventCaller, e);
-            case MessageRemoveEvent e -> callback.accept(messageRemoveEventCaller, e);
-            case MessageUpdateEvent e -> callback.accept(messageUpdateEventCaller, e);
-            default -> throw new EventRoutingPathNotFound(event.getClass().getSimpleName());
         }
     }
 }

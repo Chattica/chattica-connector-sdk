@@ -2,8 +2,8 @@ plugins {
     id 'java'
 }
 
-group 'org.example'
-version '0.0.1alpha-RELEASE'
+group = 'com.chattica'
+version = '0.0.1alpha-RELEASE'
 
 repositories {
     mavenCentral()
@@ -20,17 +20,23 @@ dependencies {
 test {
     useJUnitPlatform()
 }
-sourceCompatibility = JavaVersion.VERSION_17
-targetCompatibility = JavaVersion.VERSION_17
 
-tasks.withType(JavaCompile) {
-    options.compilerArgs += "--enable-preview"
+javadoc {
+    options.stylesheetFile = new File(projectDir, ".javadoc-setting/javadoc.css")
+    options.addStringOption("locale","ko_KR")
+    options.addStringOption("encoding","UTF-8")
+    options.addStringOption("charset","UTF-8")
+    options.addStringOption("docencoding","UTF-8")
 }
 
-tasks.withType(Test) {
-    jvmArgs += "--enable-preview"
+task javadocJar(type: Jar) {
+    archiveClassifier.set 'javadoc'
+    from javadoc
 }
 
-tasks.withType(JavaExec) {
-    jvmArgs += '--enable-preview'
+task copyJavadoc(type: Copy) {
+    dependsOn javadocJar
+    delete fileTree('docs/javadoc')
+    from 'build/docs/javadoc'
+    into 'docs/javadoc'
 }
