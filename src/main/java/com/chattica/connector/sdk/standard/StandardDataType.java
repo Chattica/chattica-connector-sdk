@@ -7,13 +7,20 @@ import com.chattica.connector.sdk.domain.user.UserType;
 import com.chattica.connector.sdk.global.event.EventType;
 import lombok.RequiredArgsConstructor;
 
+/**
+ * 기본적인 DataType 들을 명시해놓은 DataType 관련 인터페이스에 대한 표준 구현체입니다.
+ *
+ * @see DataType
+ * @author JeeInho
+ * @since 0.0.1alpha-RELEASE
+ * @version 0.0.1alpha-RELEASE
+ */
 @RequiredArgsConstructor
 public enum StandardDataType implements DataType, ChannelType, MessageType, UserType, EventType {
-    MESSAGE(1),
-    SERVER(2),
-    CHANNEL(3),
-    USER(4),
-    EVENT(5);
+    EVENT(1000),
+    USER(2000),
+    CHANNEL(3000),
+    MESSAGE(4000);
 
     private final Integer type;
 

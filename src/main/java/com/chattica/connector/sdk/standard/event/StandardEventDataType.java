@@ -3,6 +3,14 @@ package com.chattica.connector.sdk.standard.event;
 import com.chattica.connector.sdk.global.event.EventType;
 import lombok.RequiredArgsConstructor;
 
+/**
+ * Chattica 에서 기본적으로 지원하는 Event에 대한 EventType 표준구현체 입니다.
+ *
+ * @see EventType
+ * @author JeeInho
+ * @since 0.0.1alpha-RELEASE
+ * @version 0.0.1alpha-RELEASE
+ */
 @RequiredArgsConstructor
 public enum StandardEventDataType implements EventType {
     EVENT(1000),

@@ -9,6 +9,14 @@ import lombok.RequiredArgsConstructor;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * 이벤트의 호출(call)과 이에대한 처리(listen)를 관리하는 EventCaller 의 ListenerContainer 를 사용한 표준구현체입니다.
+ *
+ * @see EventCaller
+ * @author JeeInho
+ * @since 0.0.1alpha-RELEASE
+ * @version 0.0.1alpha-RELEASE
+ */
 @RequiredArgsConstructor
 public class StandardEventCaller<T extends Event> implements EventCaller<T>, ListenerContainer<T> {
     private final Set<EventListener<T>> eventListeners = new HashSet<>();

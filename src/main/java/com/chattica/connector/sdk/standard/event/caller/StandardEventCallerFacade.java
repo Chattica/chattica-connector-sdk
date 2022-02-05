@@ -25,6 +25,14 @@ import lombok.RequiredArgsConstructor;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
+/**
+ * Chattica 내의 모든 Event에 대한 Listening/Calling 을 간편하게해주는 EventCallerFacade 에 대한 표준구현체입니다.
+ *
+ * @see EventCallerFacade
+ * @author JeeInho
+ * @since 0.0.1alpha-RELEASE
+ * @version 0.0.1alpha-RELEASE
+ */
 @RequiredArgsConstructor
 public class StandardEventCallerFacade implements EventCallerFacade {
     private final ChannelAddEventCaller channelAddEventCaller;
