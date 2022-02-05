@@ -1,5 +1,5 @@
 com.chattica.connector.sdk.domain.channel
-com.chattica.connector.sdk.domain.channel.actionable
+com.chattica.connector.sdk.domain.channel.action.actionable
 com.chattica.connector.sdk.domain.channel.event
 com.chattica.connector.sdk.domain.channel.event.caller
 com.chattica.connector.sdk.domain.message

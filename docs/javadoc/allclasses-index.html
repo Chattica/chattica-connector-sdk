@@ -63,10 +63,14 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Chattica 의 모든 추상정보 객체들이 구현해야하는 인터페이스입니다.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/chattica/connector/sdk/domain/channel/actionable/ActionableChannel.html" title="class in com.chattica.connector.sdk.domain.channel.actionable">ActionableChannel</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="com/chattica/connector/sdk/domain/channel/actionable/ActionableChannelGenerator.html" title="interface in com.chattica.connector.sdk.domain.channel.actionable">ActionableChannelGenerator</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/chattica/connector/sdk/domain/channel/action/actionable/ActionableChannel.html" title="class in com.chattica.connector.sdk.domain.channel.action.actionable">ActionableChannel</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">채널 관련 명령에 대한 Actionable 추상 구현체입니다.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="com/chattica/connector/sdk/domain/channel/action/actionable/ActionableChannelGenerator.html" title="interface in com.chattica.connector.sdk.domain.channel.action.actionable">ActionableChannelGenerator</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">ActionableChannel을 생성하는 Generator 입니다.</div>
+</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/chattica/connector/sdk/global/action/ActionableData.html" title="interface in com.chattica.connector.sdk.global.action">ActionableData</a>&lt;<a href="com/chattica/connector/sdk/global/action/ActionableData.html" title="type parameter in ActionableData">T</a> extends <a href="com/chattica/connector/sdk/global/data/AbstractData.html" title="interface in com.chattica.connector.sdk.global.data">AbstractData</a>&gt;</div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">CRUD 및 기타 오퍼레이션을 수행할 수 있는 정보객체가 구현해야하는 인터페이스입니다.</div>
@@ -76,29 +80,53 @@ loadScripts(document, 'script');</script>
 <div class="block">ActionableData 를 생성하는 ActionableDataGenerator 에 대한 인터페이스입니다.</div>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/chattica/connector/sdk/domain/message/action/actionable/ActionableMessage.html" title="class in com.chattica.connector.sdk.domain.message.action.actionable">ActionableMessage</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">메세지 관련 명령에 대한 Actionable 추상 구현체입니다.</div>
+</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="com/chattica/connector/sdk/domain/message/action/actionable/ActionableMessageGenerator.html" title="interface in com.chattica.connector.sdk.domain.message.action.actionable">ActionableMessageGenerator</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">ActionableMessage 를 생성하는 Generator 입니다.</div>
+</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/chattica/connector/sdk/domain/channel/Channel.html" title="class in com.chattica.connector.sdk.domain.channel">Channel</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">채널 에 대한 정보를 담는 추상화 객체입니다.</div>
+</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/chattica/connector/sdk/domain/channel/event/ChannelAddEvent.html" title="class in com.chattica.connector.sdk.domain.channel.event">ChannelAddEvent</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">채널이 추가될 때 발생하는 이벤트입니다.</div>
+</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/chattica/connector/sdk/domain/channel/event/caller/ChannelAddEventCaller.html" title="class in com.chattica.connector.sdk.domain.channel.event.caller">ChannelAddEventCaller</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">ChannelAddEvent 를호출하는 EventCaller 입니다.</div>
+</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/chattica/connector/sdk/domain/channel/event/ChannelEvent.html" title="class in com.chattica.connector.sdk.domain.channel.event">ChannelEvent</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">채널에 관련한 이벤트들에 대한 추상 구현체 입니다.</div>
+</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/chattica/connector/sdk/domain/channel/ChannelId.html" title="interface in com.chattica.connector.sdk.domain.channel">ChannelId</a>&lt;<a href="com/chattica/connector/sdk/domain/channel/ChannelId.html" title="type parameter in ChannelId">T</a>&gt;</div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="block">채널 에 대한 식별정보에 대한 인터페이스입니다.</div>
+</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/chattica/connector/sdk/domain/channel/event/ChannelRemoveEvent.html" title="class in com.chattica.connector.sdk.domain.channel.event">ChannelRemoveEvent</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">채널이 삭제될 때 발생하는 이벤트입니다.</div>
+</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/chattica/connector/sdk/domain/channel/event/caller/ChannelRemoveEventCaller.html" title="class in com.chattica.connector.sdk.domain.channel.event.caller">ChannelRemoveEventCaller</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">ChannelRemoveEvent 를호출하는 EventCaller 입니다.</div>
+</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="com/chattica/connector/sdk/domain/channel/ChannelType.html" title="interface in com.chattica.connector.sdk.domain.channel">ChannelType</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">어떠한 ChannelData 인지에 대한 인터페이스입니다 (PrivateChannel, ServerChannel 등)</div>
+</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/chattica/connector/sdk/domain/channel/event/ChannelUpdateEvent.html" title="class in com.chattica.connector.sdk.domain.channel.event">ChannelUpdateEvent</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">채널이 갱신될 때 발생하는 이벤트입니다.</div>
+</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/chattica/connector/sdk/domain/channel/event/caller/ChannelUpdateEventCaller.html" title="class in com.chattica.connector.sdk.domain.channel.event.caller">ChannelUpdateEventCaller</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">ChannelUpdateEvent 를호출하는 EventCaller 입니다.</div>
+</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/chattica/connector/sdk/global/data/DataType.html" title="interface in com.chattica.connector.sdk.global.data">DataType</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">정보의 형태(Type) 을 명시하기위해 구현해야하는 인터페이스입니다.</div>
@@ -156,25 +184,45 @@ loadScripts(document, 'script');</script>
 <div class="block">EventListener 를 제거할 수 있는 객체가 구현해야할 인터페이스입니다.</div>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/chattica/connector/sdk/domain/message/Message.html" title="class in com.chattica.connector.sdk.domain.message">Message</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">메세지 에 대한 정보를 담는 추상화 객체입니다.</div>
+</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/chattica/connector/sdk/domain/message/event/MessageAddEvent.html" title="class in com.chattica.connector.sdk.domain.message.event">MessageAddEvent</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">메세지가 추가될 때 발생하는 이벤트입니다.</div>
+</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/chattica/connector/sdk/domain/message/event/caller/MessageAddEventCaller.html" title="class in com.chattica.connector.sdk.domain.message.event.caller">MessageAddEventCaller</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">MessageAddEvent 를호출하는 EventCaller 입니다.</div>
+</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/chattica/connector/sdk/domain/message/event/MessageEvent.html" title="class in com.chattica.connector.sdk.domain.message.event">MessageEvent</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">메세지에 관련한 이벤트들에 대한 추상 구현체 입니다.</div>
+</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/chattica/connector/sdk/domain/message/MessageId.html" title="interface in com.chattica.connector.sdk.domain.message">MessageId</a>&lt;<a href="com/chattica/connector/sdk/domain/message/MessageId.html" title="type parameter in MessageId">T</a>&gt;</div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="block">메세지 에 대한 식별정보에 대한 인터페이스입니다.</div>
+</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/chattica/connector/sdk/domain/message/event/MessageRemoveEvent.html" title="class in com.chattica.connector.sdk.domain.message.event">MessageRemoveEvent</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">메세지가 삭제될 때 발생하는 이벤트입니다.</div>
+</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/chattica/connector/sdk/domain/message/event/caller/MessageRemoveEventCaller.html" title="class in com.chattica.connector.sdk.domain.message.event.caller">MessageRemoveEventCaller</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">MessageRemoveEvent 를호출하는 EventCaller 입니다.</div>
+</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="com/chattica/connector/sdk/domain/message/MessageType.html" title="interface in com.chattica.connector.sdk.domain.message">MessageType</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">어떠한 MessageData 인지에 대한 인터페이스입니다 (EmbedMessage, RawMessage 등)</div>
+</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/chattica/connector/sdk/domain/message/event/MessageUpdateEvent.html" title="class in com.chattica.connector.sdk.domain.message.event">MessageUpdateEvent</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">메세지가 갱신될 때 발생하는 이벤트입니다.</div>
+</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/chattica/connector/sdk/domain/message/event/caller/MessageUpdateEventCaller.html" title="class in com.chattica.connector.sdk.domain.message.event.caller">MessageUpdateEventCaller</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">MessageUpdateEvent 를호출하는 EventCaller 입니다.</div>
+</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/chattica/connector/sdk/global/data/Nameable.html" title="interface in com.chattica.connector.sdk.global.data">Nameable</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">이름이 존재하는 모든 객체가 구현해야하는 인터페이스입니다.</div>
@@ -212,11 +260,17 @@ loadScripts(document, 'script');</script>
 <div class="block">Chattica 에서 기본적으로 지원하는 Event에 대한 EventType 표준구현체 입니다.</div>
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/chattica/connector/sdk/domain/user/User.html" title="class in com.chattica.connector.sdk.domain.user">User</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">사용자 에 대한 정보를 담는 추상화 객체입니다.</div>
+</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/chattica/connector/sdk/domain/user/UserId.html" title="interface in com.chattica.connector.sdk.domain.user">UserId</a>&lt;<a href="com/chattica/connector/sdk/domain/user/UserId.html" title="type parameter in UserId">T</a>&gt;</div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
+<div class="block">사용자 에 대한 식별정보에 대한 인터페이스입니다.</div>
+</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="com/chattica/connector/sdk/domain/user/UserType.html" title="interface in com.chattica.connector.sdk.domain.user">UserType</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">어떠한 UserData 인지에 대한 인터페이스입니다 (BotUser, HumanUser 등)</div>
+</div>
 </div>
 </div>
 </div>

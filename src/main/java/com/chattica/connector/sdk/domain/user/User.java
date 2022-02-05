@@ -5,6 +5,13 @@ import com.chattica.connector.sdk.global.data.Nameable;
 import com.chattica.connector.sdk.standard.StandardDataType;
 import lombok.RequiredArgsConstructor;
 
+/**
+ * 사용자 에 대한 정보를 담는 추상화 객체입니다.
+ *
+ * @author JeeInho
+ * @since 0.0.1alpha-RELEASE
+ * @version 0.0.1alpha-RELEASE
+ */
 @RequiredArgsConstructor
 public abstract class User implements AbstractData, Nameable {
     private final UserId id;
